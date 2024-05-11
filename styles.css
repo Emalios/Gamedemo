@@ -10,14 +10,32 @@ body {
     height: 100vh;
 }
 
-#container {
+#dollar_container {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#main_container {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    text-align: center;
+}
+
+#container {
+    justify-content: space-between;
+    width: -webkit-fill-available;
     padding: 20px;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -27,8 +45,8 @@ h1 {
 }
 
 #dollar {
-    width: 100px;
-    height: 100px;
+    width: 256px;
+    height: 256px;
     background-image: url('dollar.png');
     background-size: cover;
     cursor: pointer;
@@ -38,6 +56,14 @@ h1 {
 #money {
     font-size: 24px;
     color: #4CAF50;
+}
+
+#shop {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 .upgrade {
@@ -50,6 +76,20 @@ h1 {
     margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
+}
+
+.upgrade:hover {
+    background-color: #45a049;
+}
+
+.upgrade:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.upgrade.highlight {
+    background-color: #ffcc00;
+    transition: background-color 0.3s;
 }
 
 #dollar:active {
