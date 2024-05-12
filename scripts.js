@@ -1,6 +1,6 @@
 // script.js
-let money = 999;
-let moneyBySeconds = 1;
+let money = 0;
+let moneyBySeconds = 0;
 
 
 function addMoneyPerSecond(amount) {

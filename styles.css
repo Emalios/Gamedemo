@@ -2,6 +2,7 @@
 
 #backgroundImage {
     z-index: 100;
+    align-self: center;
     height: 100%;
     width: 100%;
     left: 0;
@@ -26,6 +27,7 @@ body {
 #dollar_container {
     height: -webkit-fill-available;
     justify-content: center;
+    width: 400px;
     /* change image by changing the number in front */
     background-image: url('Images/3.background.jpg');
     background-size: cover;
