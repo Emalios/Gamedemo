@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="backgroundImage"> <img src="Images/burgerBackground.jpg" height="1000">  </div>
 <div id="main_container">
     <div id="container">
         <div id="dollar_container">
@@ -19,7 +20,7 @@
             <h2>Shop</h2>
             <ul id="upgrade-list">
                 <li>
-                    <button class="timeWarp" onclick="boostTime()">Boost!</button>
+                    <button id="timeWarp" class="timeWarp" onclick="boostTime()">Boost!</button>
                 </li>
                 <li>
                     <div class="item">
@@ -35,28 +36,78 @@
                 </li>
                 <li>
                     <div class="item">
-                        <button id="upgrade2" class="upgrade" onclick="buyUpgrade(100, 2, 'item2-number')">
+                        <button id="upgrade2" class="upgrade" onclick="buyUpgrade(100, 5, 'item2-number')">
                             <img src="Images/2.groceryStore.jpg" alt="Upgrade 2" class="upgrade-image">
                             <p class="upgrade_price">Supermarket <br> <br> $100</p>
                         </button>
                         <div class="item-info">
-                            <p>2$/s</p>
+                            <p>5$/s</p>
                             <p id="item2-number">*0</p>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="item">
-                        <button id="upgrade3" class="upgrade" onclick="buyUpgrade(1000, 5, 'item3-number')">
+                        <button id="upgrade3" class="upgrade" onclick="buyUpgrade(1000, 15, 'item3-number')">
                             <img src="Images/3.railwayStation.jpg" alt="Upgrade 3" class="upgrade-image">
-                            <p class="upgrade_price">Train                 <br> <br> $1000</p>
+                            <p class="upgrade_price">Train station                <br> <br> $1000</p>
                         </button>
                         <div class="item-info">
-                            <p>5$/s</p>
+                            <p>15$/s</p>
                             <p id="item3-number">*0</p>
                         </div>
                     </div>
-
+                </li>
+                <li>
+                    <div class="item">
+                        <button id="upgrade4" class="upgrade" onclick="buyUpgrade(10000, 150, 'item4-number')">
+                            <img src="Images/4.nuclearEnergyPlant.jpg" alt="Upgrade 4" class="upgrade-image">
+                            <p class="upgrade_price">Power plant                 <br> <br> $10000</p>
+                        </button>
+                        <div class="item-info">
+                            <p>150$/s</p>
+                            <p id="item4-number">*0</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <button id="upgrade5" class="upgrade" onclick="buyUpgrade(100000, 1500, 'item5-number')">
+                            <img src="Images/5.asteroidMine.jpg" alt="Upgrade 5" class="upgrade-image">
+                            <p class="upgrade_price">Asteroid mine                 <br> <br> $100000</p>
+                        </button>
+                        <div class="item-info">
+                            <p>1500$/s</p>
+                            <p id="item5-number">*0</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <button id="upgrade6" class="upgrade" onclick="buyUpgrade(1000000, 15000, 'item6-number')">
+                            <img src="Images/6.blackHoleGenerator.jpg" alt="Upgrade 6" class="upgrade-image">
+                            <p class="upgrade_price">Black hole generator                 <br> <br> $1000000</p>
+                        </button>
+                        <div class="item-info">
+                            <p>15000$/s</p>
+                            <p id="item6-number">*0</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <button id="upgrade7" class="upgrade" onclick="buyUpgrade(10000000, 150000, 'item7-number')">
+                            <img src="Images/7.hamsterWheel.jpg" alt="Upgrade 7" class="upgrade-image">
+                            <p class="upgrade_price">hamster wheel                 <br> <br> $10000000</p>
+                        </button>
+                        <div class="item-info">
+                            <p>150000$/s</p>
+                            <p id="item7-number">*0</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button id="adButton" class="adButton" onclick="watchAd()">SuperBoost!</button>
                 </li>
                 <!-- Ajoutez d'autres améliorations ici -->
             </ul>

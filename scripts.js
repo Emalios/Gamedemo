@@ -2,6 +2,7 @@
 let money = 999;
 let moneyBySeconds = 1;
 
+
 function addMoneyPerSecond(amount) {
     moneyBySeconds += amount;
 }
@@ -38,7 +39,7 @@ function buyUpgrade(cost, value, id) {
         moneyBySeconds += value;
         document.getElementById(id).textContent = '*' + (parseInt(document.getElementById(id).textContent.replace('*', '')) + 1);
         let upgradeSound = new Audio('sounds/upgrade_sound.mp3');
-        upgradeSound.volume = 0.1
+        upgradeSound.volume = 0.03
         upgradeSound.play();
     }
 }
@@ -46,16 +47,45 @@ function buyUpgrade(cost, value, id) {
 let lastBoostTime = 0;
 const boostCooldown = 60 * 1000; // 60 seconds in milliseconds
 
-function boostTime() {
+function boostTime(id) {
     const currentTime = new Date().getTime();
     if (currentTime - lastBoostTime >= boostCooldown) {
-        money += 1000;
+        money += 100000000;
         lastBoostTime = currentTime;
-    } else {
-        console.log("Boost button is on cooldown. Wait for 1 minute before using it again.");
-    }
+        const joku = document.getElementById("timeWarp")
+        joku.disabled = true;
+        setTimeout(() => {
+            joku.disabled = false;
+        }, boostCooldown);
+        
+    } 
 }
 
+let adBoostActive = false;
+const adBoostDuration = 5 * 1000;
+
+function watchAd() {
+    if (!adBoostActive) { // Tarkistetaan, ettei mainosboosti ole jo aktiivinen
+        adBoostActive = true; // Asetetaan mainosboosti aktiiviseksi
+        addMoneyPerSecond(moneyBySeconds); // Tuplaa rahan ansaitsemisen sekunnissa
+        const joku2 = document.getElementById("adButton")
+        joku2.disabled = true;
+
+        document.getElementById("backgroundImage").style.display = "block"
+        /*document.body.style.backgroundImage = "url('Images/7.hamsterWheel.jpg')";*/
+        setTimeout(() => {
+            document.getElementById("backgroundImage").style.display = "none"
+        }, adBoostDuration)
+
+        setTimeout(() => {
+            adBoostActive = false; // Poistetaan mainosboosti käytöstä 30 sekunnin kuluttua
+            moneyBySeconds = moneyBySeconds / 2;
+            joku2.disabled = false;
+            /*document.body.style.backgroundImage = "none";*/
+        }, adBoostDuration + 5000);
+        
+    }
+}
 
 
 let valuePerClick = 1;

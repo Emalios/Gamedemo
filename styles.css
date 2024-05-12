@@ -1,4 +1,16 @@
 /* style.css */
+
+#backgroundImage {
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: aqua;
+    position: fixed;
+    display: none;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('Images/4.background.jpg');
@@ -113,6 +125,39 @@ li {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
 }
+
+.adButton {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.adButton:hover {
+    background-color:#ffcc00;
+}
+
+.adButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+.timeWarp:hover {
+    background-color:#ffcc00;
+}
+
+.timeWarp:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
 
 .upgrade:hover {
     background-color: #45a049;
