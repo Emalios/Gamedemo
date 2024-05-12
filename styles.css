@@ -71,6 +71,7 @@ li {
 }
 
 #shop {
+    width: 400px;;
     background-color: #fff;
     height: -webkit-fill-available;
     border-radius: 10px;
@@ -86,6 +87,7 @@ li {
 }
 
 .upgrade {
+    margin: 0px 10px 10px;
     text-align: center;
     width: -webkit-fill-available;
     display: flex;
@@ -96,7 +98,6 @@ li {
     padding: 0px 10px 0px 0px;
     font-size: 16px;
     border-radius: 5px;
-    margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
 }
@@ -149,4 +150,9 @@ li {
 
 .item-info {
     padding-right: 10px;
+}
+
+.item-info p {
+    /* Votre style pour les paragraphes dans la div .item-info */
+    margin: 0px 0px 10px;
 }
