@@ -12,6 +12,8 @@ body {
 }
 
 #dollar_container {
+    height: -webkit-fill-available;
+    justify-content: center;
     /* change image by changing the number in front */
     background-image: url('Images/3.background.jpg');
     background-size: cover;
@@ -36,6 +38,7 @@ body {
 #container {
     justify-content: space-between;
     width: -webkit-fill-available;
+    height: -webkit-fill-available;
     padding: 20px;
     text-align: center;
     display: flex;
@@ -46,6 +49,11 @@ body {
 h1 {
     margin-bottom: 20px;
     color: #333;
+    align-self: self-start;
+}
+
+li {
+    list-style-type: none
 }
 
 #dollar {
@@ -64,17 +72,28 @@ h1 {
 
 #shop {
     background-color: #fff;
+    height: -webkit-fill-available;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
 }
 
+.upgrade_price {
+    pointer-events: none;
+    width: -webkit-fill-available;
+    margin: 0;
+}
+
 .upgrade {
+    text-align: center;
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
     background-color: #4CAF50;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 0px 10px 0px 0px;
     font-size: 16px;
     border-radius: 5px;
     margin: 10px;
@@ -108,6 +127,26 @@ h1 {
     transition: background-color 0.3s;
 }
 
+#upgrade-list {
+    padding: 0;
+}
+
 #dollar:active {
     transform: scale(0.95);
+}
+
+.upgrade-image {
+    pointer-events: none;
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item-info {
+    padding-right: 10px;
 }

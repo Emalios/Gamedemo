@@ -31,11 +31,12 @@ function updateMoney() {
     document.getElementById('money').textContent = '$' + money.toFixed(0);
 }
 
-function buyUpgrade(cost, value) {
+function buyUpgrade(cost, value, id) {
     if (money >= cost) {
         money -= cost;
         updateMoney();
-        valuePerClick += value;
+        moneyBySeconds += value;
+        document.getElementById(id).textContent = '*' + (parseInt(document.getElementById(id).textContent.replace('*', '')) + 1);
         let upgradeSound = new Audio('sounds/upgrade_sound.mp3');
         upgradeSound.volume = 0.1
         upgradeSound.play();
@@ -62,7 +63,6 @@ let valuePerClick = 1;
 document.getElementById('dollar').addEventListener('click', function(event) {
     money += valuePerClick;
     let clickSound = new Audio('sounds/click.mp3');
-    console.log("cc")
     clickSound.volume = 0.15
     clickSound.play();
     animateDollar(event.clientX, event.clientY)
