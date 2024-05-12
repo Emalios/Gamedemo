@@ -42,6 +42,21 @@ function buyUpgrade(cost, value) {
     }
 }
 
+let lastBoostTime = 0;
+const boostCooldown = 60 * 1000; // 60 seconds in milliseconds
+
+function boostTime() {
+    const currentTime = new Date().getTime();
+    if (currentTime - lastBoostTime >= boostCooldown) {
+        money += 1000;
+        lastBoostTime = currentTime;
+    } else {
+        console.log("Boost button is on cooldown. Wait for 1 minute before using it again.");
+    }
+}
+
+
+
 let valuePerClick = 1;
 
 document.getElementById('dollar').addEventListener('click', function(event) {
@@ -108,3 +123,4 @@ document.querySelectorAll('.upgrade').forEach(item => {
         event.target.classList.remove('highlight');
     });
 });
+

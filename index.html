@@ -9,18 +9,19 @@
 <body>
 <div id="main_container">
     <h1>Capitalism Clicker</h1>
-    <div id="container">
+    <div id="container">          
         <div id="dollar_container">
             <div id="dollar"></div>
             <p>Money: <span id="money">$0</span></p>
             <p id="money-per-second">Money per second: $0.00</p>
-        </div>
+        </div>        
         <div id="shop">
+            <button class="timeWarp" onclick="boostTime()">Boost!</button>
             <button class="upgrade" onclick="buyUpgrade(10, 0.1)">Upgrade 1 - $10 (+$0.1 per click)</button>
             <button class="upgrade" onclick="buyUpgrade(50, 0.5)">Upgrade 2 - $50 (+$0.5 per click)</button>
             <button class="upgrade" onclick="buyUpgrade(100, 1)">Upgrade 3 - $100 (+$1 per click)</button>
-        </div>
-    </div>
+        </div>               
+    </div> 
 </div>
 
 <script src="scripts.js"></script>
