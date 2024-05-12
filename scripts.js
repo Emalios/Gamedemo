@@ -50,7 +50,7 @@ const boostCooldown = 60 * 1000; // 60 seconds in milliseconds
 function boostTime(id) {
     const currentTime = new Date().getTime();
     if (currentTime - lastBoostTime >= boostCooldown) {
-        money += 100000000;
+        money += 10000;
         lastBoostTime = currentTime;
         const joku = document.getElementById("timeWarp")
         joku.disabled = true;
