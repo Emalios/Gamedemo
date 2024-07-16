@@ -18,7 +18,7 @@ A chaque 2h passé, on doit effectuer un *crafting roll*. En cas de réussite, o
 
 Chaque profession est associé à une abilité et des outils. Dans quasiment tous les cas, crafter sans les outils appropriés est impossible.
 
-Le formule pour le modifier de *crafting roll* est: \`Cmod = compétence d'artisanat + bonus de caractéristique associé\` 
+Le formule pour le modifier de *crafting roll* est: `Cmod = compétence d'artisanat + bonus de caractéristique associé` 
 
 Chaque profession se voit associé une ou plusieurs caractéristique pour le modifier:
 
@@ -28,11 +28,11 @@ Chaque profession se voit associé une ou plusieurs caractéristique pour le mod
 | Forgeron          | Force                          |
 | Cuisinier         | Sagesse                        |
 
-Un *crafting roll* est réussi s'il est égal ou supérieur à la difficulté de l'item crafté => \`1d20+Cmod >= difficulté\` 
+Un *crafting roll* est réussi s'il est égal ou supérieur à la difficulté de l'item crafté => `1d20+Cmod >= difficulté` 
 
 #### Take 10
 
-Il existe un moyen de roll 10 à coup à un d20 lors d'un craft, pour cela, il faut doubler le temps de craft d'une étape, passant donc de 2 à 4h. On ajoute ensuite le modificateur \`Cmod\`  à ce 10
+Il existe un moyen de roll 10 à coup à un d20 lors d'un craft, pour cela, il faut doubler le temps de craft d'une étape, passant donc de 2 à 4h. On ajoute ensuite le modificateur `Cmod`  à ce 10
 
 ### Temps de craft et repos
 
